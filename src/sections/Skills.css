@@ -1,0 +1,117 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.skill-card {
+  padding: 26px 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-panel);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -24px rgba(124, 108, 246, 0.45);
+}
+
+.skill-card-title {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--accent-soft);
+  margin-bottom: 16px;
+}
+
+.skill-card-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-card-tags li {
+  font-size: 14.5px;
+  color: var(--text);
+  padding-left: 14px;
+  position: relative;
+}
+
+.skill-card-tags li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--text-faint);
+}
+
+.skills-secondary {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.skills-secondary-title {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-faint);
+  margin-bottom: 16px;
+}
+
+.skills-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-pill-list li {
+  font-size: 14px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-muted);
+}
+
+.skills-lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skills-lang-list li {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  font-size: 14.5px;
+  color: var(--text);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.skills-lang-level {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+@media (max-width: 980px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-secondary {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

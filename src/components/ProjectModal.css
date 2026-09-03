@@ -1,0 +1,125 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(5, 7, 11, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px;
+  overflow-y: auto;
+}
+
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 36px 36px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.modal-close:hover {
+  color: var(--text);
+  border-color: var(--accent-soft);
+}
+
+.modal-title {
+  margin-top: 16px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.modal-tech {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-faint);
+}
+
+.modal-section {
+  margin-top: 26px;
+}
+
+.modal-section h3 {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--accent-soft);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.modal-section p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.modal-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  color: var(--text);
+}
+
+.modal-feature-list svg {
+  color: var(--accent-soft);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+.modal-tags span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: var(--accent-dim);
+  color: var(--accent-soft);
+}
+
+.modal-actions {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.modal-no-repo {
+  font-size: 14px;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .modal-panel {
+    padding: 30px 22px 28px;
+  }
+}
